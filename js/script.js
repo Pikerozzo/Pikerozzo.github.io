@@ -23,3 +23,14 @@ function backToTop() {
 document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
 }
+
+
+// Close the navbar when a link is clicked
+document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+        let navbarCollapse = document.querySelector(".navbar-collapse");
+        if (navbarCollapse.classList.contains("show")) {
+            new bootstrap.Collapse(navbarCollapse).hide();
+        }
+    });
+});

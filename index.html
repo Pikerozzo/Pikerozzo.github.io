@@ -22,119 +22,41 @@
   </head>
   <body>
     <header>
-      <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="navbar"> -->
-      <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" id="navbar-logo" href="#">
-          <img src="imgs/logo_white.gif" alt="Villa Rucellai">
-          <h2>Villa Rucellai</h2>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Chi siamo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#gallery">Galleria</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contacts">Contatti</a>
-            </li>
-          </ul>
-          <div class="mr-5">
-            <a href="#" class="btn btn-dark btn-lg book-now-btn py-3">
-              Prenota Ora
-            </a>
-          </div>
-          <div id="languageSelector">
-            <button class="btn btn-outline-light btn-lg my-2 my-sm-0" style="display: none">Italiano</button>
-            <button type="button" class="btn btn-link ">English</button>
-          </div>
-        </div>
-      </nav> 
-       -->
-      
-
-      <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-2"> -->
-     <!-- <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark px-2"> 
-        <a class="navbar-brand" id="navbar-logo" href="#">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="navbar-logo">
             <img src="imgs/logo_white.gif" alt="Villa Rucellai Logo" height="40">
-            <h2>Villa Rucellai</h2>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse p-2" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Chi siamo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#gallery">Galleria</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contacts">Contatti</a>
-                </li>
+              <h2>Villa Rucellai</h2>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#aboutUs" data-key="nav_about_us">Chi siamo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services" data-key="nav_services">Servizi</a>
+              </li>            
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery" data-key="nav_gallery">Galleria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacts" data-key="nav_contacts">Contatti</a>
+              </li>
             </ul>
-            <div class="d-flex">
-            <div >
-              <div class="mr-5">
-                <a href="#" class="btn btn-dark btn-lg book-now-btn py-3">
-                  Prenota Ora
-                </a>
-              </div>
-              <div id="languageSelector">
-                <button class="btn btn-outline-light btn-lg my-2 my-sm-0" style="display: none">Italiano</button>
-                <button type="button" class="btn btn-link ">English</button>
-              </div>
+            <div class="mr-5">
+              <a href="#" class="btn btn-dark btn-lg btn-outline-light book-now-btn py-3" data-key="book_now_btn">
+                Prenota Ora
+              </a>
+            </div>
+            <div id="languageSelector">
+              <img type="button" class='lang-switch' id="lang-switch-it" src="./imgs/icons/flag_italy.png" alt="Italiano" style="display: none"/>
+              <img type="button" class='lang-switch' id="lang-switch-en" src="./imgs/icons/flag_uk.png" alt="English" style="display: none"/>
             </div>
         </div>
-    </nav>
-     -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#" id="navbar-logo">
-          <img src="imgs/logo_white.gif" alt="Villa Rucellai Logo" height="40">
-            <h2>Villa Rucellai</h2>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#aboutUs" data-key="nav_about_us">Chi siamo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#gallery" data-key="nav_gallery">Galleria</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#services" data-key="nav_services">Servizi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contacts" data-key="nav_contacts">Contatti</a>
-            </li>
-          </ul>
-          <div class="mr-5">
-            <a href="#" class="btn btn-dark btn-lg btn-outline-light book-now-btn py-3" data-key="book_now_btn">
-              Prenota Ora
-            </a>
-          </div>
-          <div id="languageSelector">
-            <img type="button" class='lang-switch' id="lang-switch-it" src="./imgs/icons/flag_italy.png" alt="Italiano" style="display: none"/>
-            <img type="button" class='lang-switch' id="lang-switch-en" src="./imgs/icons/flag_uk.png" alt="English" style="display: none"/>
-            <!-- <utton class="btn btn-outline-light btn-lg my-2 my-sm-0" style="display: none">Italiano</button>
-            <button type="button" class="btn btn-link ">English</button> -->
-          </div>
-      </div>
-    </nav>
-
+      </nav>
     </header>
 
     <main>
@@ -195,10 +117,7 @@
 
 
       </div>
-      
-
-      <h1 data-key="heading">Welcome</h1>
-
+    
 
       <section id="aboutUs">
         <div class="container">
@@ -211,22 +130,10 @@
                 della campagna toscana e offre ai suoi ospiti un'esperienza
                 unica e indimenticabile.
               </p>
-              <p>
-                La Villa Rucellai è un antico casale toscano situato a Prato, a
-                pochi chilometri da Firenze. La struttura è immersa nel verde
-                della campagna toscana e offre ai suoi ospiti un'esperienza
-                unica e indimenticabile.
-              </p>
             </div>
             <div class="col-lg-6">
               <h2 data-key="about_us_history_title">LA NOSTRA STORIA</h2>
               <p data-key="about_us_history_p">
-                La Villa Rucellai è un antico casale toscano situato a Prato, a
-                pochi chilometri da Firenze. La struttura è immersa nel verde
-                della campagna toscana e offre ai suoi ospiti un'esperienza
-                unica e indimenticabile.
-              </p>
-              <p>
                 La Villa Rucellai è un antico casale toscano situato a Prato, a
                 pochi chilometri da Firenze. La struttura è immersa nel verde
                 della campagna toscana e offre ai suoi ospiti un'esperienza
@@ -425,38 +332,39 @@
 
       </section>
 
-      <section id="contacts">
-        <div class="container-fluid bg-dark text-center">
-          <div class="row">
-            <div class="col">
-              <h2 data-key="contacts_title">CONTATTACI</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg">
-              <p>
-                <a href="mailto:villarucellai@masternet.it" id="contactsMail">villarucellai@masternet.it</a                >
-              </p>
-            </div>
-            <div class="col-lg">
-              <p>Via di Canneto 16, 59100 Prato (PO)</p>    
-            </div>
-            <div class="col-lg">
-              <p>Tel: (+39) 0574 462225</p>
-            </div>
-          </div>
-          <div class="row social-icons">
-            <div class="col">
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-              <!-- </div>
-              <div class="col"> -->
-                <!-- <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <div id="contacts">
+        <section id="contacts_content">
+          <div class="container-fluid bg-dark text-center">
+            <div class="row">
+              <div class="col">
+                <h2 data-key="contacts_title">CONTATTACI</h2>
               </div>
+            </div>
+            <div class="row">
+              <div class="col-lg">
+                <p>
+                  <a href="mailto:villarucellai@masternet.it" id="contactsMail">villarucellai@masternet.it</a                >
+                </p>
+              </div>
+              <div class="col-lg">
+                <p>Via di Canneto 16, 59100 Prato (PO)</p>    
+              </div>
+              <div class="col-lg">
+                <p>Tel: (+39) 0574 462225</p>
+              </div>
+            </div>
+            <div class="row social-icons">
+              <div class="col">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <!-- </div>
+                <div class="col"> -->
+                  <!-- <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
           </div>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <div class="google-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5749.211105826442!2d11.123463382964532!3d43.9054356077691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132af71945daba89%3A0xa70b4cd3b87c2a79!2sVilla%20Rucellai%20-%20Fattoria%20di%20Canneto!5e0!3m2!1sit!2sit!4v1738705618070!5m2!1sit!2sit "
