@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Villa Rucellai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./imgs/im03521a.gif" />
     <!-- Add the slick-theme.css if you want default styling -->
@@ -13,7 +14,9 @@
     <!-- import bootstrap -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/> -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
     <!-- import jquery -->
   </head>
@@ -106,26 +109,28 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#aboutUs">Chi siamo</a>
+              <a class="nav-link" aria-current="page" href="#aboutUs" data-key="nav_about_us">Chi siamo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#gallery">Galleria</a>
+              <a class="nav-link" href="#gallery" data-key="nav_gallery">Galleria</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#services">Info</a>
+              <a class="nav-link" href="#services" data-key="nav_services">Servizi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contacts">Contatti</a>
+              <a class="nav-link" href="#contacts" data-key="nav_contacts">Contatti</a>
             </li>
           </ul>
           <div class="mr-5">
-            <a href="#" class="btn btn-dark btn-lg book-now-btn py-3">
+            <a href="#" class="btn btn-dark btn-lg btn-outline-light book-now-btn py-3" data-key="book_now_btn">
               Prenota Ora
             </a>
           </div>
           <div id="languageSelector">
-            <button class="btn btn-outline-light btn-lg my-2 my-sm-0" style="display: none">Italiano</button>
-            <button type="button" class="btn btn-link ">English</button>
+            <img type="button" class='lang-switch' id="lang-switch-it" src="./imgs/icons/flag_italy.png" alt="Italiano" style="display: none"/>
+            <img type="button" class='lang-switch' id="lang-switch-en" src="./imgs/icons/flag_uk.png" alt="English" style="display: none"/>
+            <!-- <utton class="btn btn-outline-light btn-lg my-2 my-sm-0" style="display: none">Italiano</button>
+            <button type="button" class="btn btn-link ">English</button> -->
           </div>
       </div>
     </nav>
@@ -190,13 +195,17 @@
 
 
       </div>
+      
+
+      <h1 data-key="heading">Welcome</h1>
+
 
       <section id="aboutUs">
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
-              <h2>CHI SIAMO</h2>
-              <p>
+              <h2 data-key="about_us_title">CHI SIAMO</h2>
+              <p data-key="about_us_p">
                 La Villa Rucellai è un antico casale toscano situato a Prato, a
                 pochi chilometri da Firenze. La struttura è immersa nel verde
                 della campagna toscana e offre ai suoi ospiti un'esperienza
@@ -210,8 +219,8 @@
               </p>
             </div>
             <div class="col-lg-6">
-              <h2>LA NOSTRA STORIA</h2>
-              <p>
+              <h2 data-key="about_us_history_title">LA NOSTRA STORIA</h2>
+              <p data-key="about_us_history_p">
                 La Villa Rucellai è un antico casale toscano situato a Prato, a
                 pochi chilometri da Firenze. La struttura è immersa nel verde
                 della campagna toscana e offre ai suoi ospiti un'esperienza
@@ -231,7 +240,7 @@
       <section id="booking">
         <!-- <h2>Prenota Ora</h2> -->
         <!-- <a href="booking-service-url" target="_blank">Book Your Stay</a> -->
-        <a href="#" class="btn btn-dark btn-lg book-now-btn py-3">
+        <a href="#" class="btn btn-dark btn-lg book-now-btn py-3" data-key="book_now_btn">
           Prenota Ora
         </a>
       </section>
@@ -242,7 +251,7 @@
             <div class="col-md text-center"><h2>COSE DA FARE</h2></div>
           </div>
           <div class="row">
-            <div class="col-md-4 text-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col"><h5>Tour enogastronomici</h5></div>
               </div>
@@ -251,7 +260,7 @@
                 città di Prade
               </div>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col"><h5>Tour enogastronomici</h5></div>
               </div>
@@ -260,7 +269,7 @@
                 città di Prade
               </div>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col"><h5>Tour enogastronomici</h5></div>
               </div>
@@ -269,9 +278,9 @@
                 città di Prade
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 text-center">
+          <!-- </div>
+          <div class="row"> -->
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col"><h5>Tour enogastronomici</h5></div>
               </div>
@@ -280,7 +289,7 @@
                 città di Prade
               </div>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col"><h5>Tour enogastronomici</h5></div>
               </div>
@@ -289,7 +298,7 @@
                 città di Prade
               </div>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col"><h5>Tour enogastronomici</h5></div>
               </div>
@@ -305,75 +314,75 @@
       <section id="services">
         <div class="container">
           <div class="row">
-            <div class="col-md text-center"><h2>I NOSTRI SERVIZI</h2></div>
+            <div class="col-md text-center"><h2 data-key="services_title">I NOSTRI SERVIZI</h2></div>
           </div>
           <div class="row">
-            <div class="col-md-4 text-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col service-item">
                   <img src="./imgs/icons/croissant.png" alt="Breakfast"/>
-                  <h5>Colazione</h5>
+                  <h5 data-key="services_breakfast_title">Colazione</h5>
                 </div>
               </div>
               <div class="row description">
-                <p>Prima colazione inclusa</p>
+                <p data-key="services_breakfast_description">Prima colazione inclusa</p>
               </div>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col service-item">
                   <img src="./imgs/icons/park.png" alt="Garden"/>
-                  <h5>Giardino</h5>
+                  <h5 data-key="services_garden_title">Giardino</h5>
                 </div>
               </div>
               <div class="row description">
-                <p>Giardino all'italiana</p>
+                <p data-key="services_garden_description">Giardino all'italiana</p>
               </div>
             </div>
-            <div class="col-md-4 col-md text-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col service-item">
                   <img src="./imgs/icons/parking.png" alt="Parking"/>
-                  <h5>Parcheggio</h5>
+                  <h5 data-key="services_parking_title">Parcheggio</h5>
                 </div>
               </div>
               <div class="row description">
-                <p>Parcheggio gratuito disponibile</p>
+                <p data-key="services_parking_description">Parcheggio gratuito disponibile</p>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 text-center">
+          <!-- </div>
+          <div class="row"> -->
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col service-item">
                   <img src="./imgs/icons/swim.png" alt="Swimming pool"/>
-                  <h5>Piscina</h5>
+                  <h5 data-key="services_pool_title">Piscina</h5>
                 </div>
               </div>
               <div class="row description">
-                <p>Piscina all'aperto disponibile</p>
+                <p data-key="services_pool_description">Piscina all'aperto disponibile</p>
               </div>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col service-item">
                   <img src="./imgs/icons/towel.png" alt="Cleaning"/>
-                  <h5>Pulizie quotidiane</h5>
+                  <h5 data-key="services_cleaning_title">Pulizie quotidiane</h5>
                 </div>
               </div>
               <div class="row description">
-                <p>Pulizie quotidiane</p>
+                <p data-key="services_cleaning_description">Pulizie quotidiane</p>
               </div>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col service-item">
                   <img src="./imgs/icons/wifi.png" alt="Wifi"/>
-                  <h5>Wifi</h5>
+                  <h5 data-key="services_wifi_title">Wifi</h5>
                 </div>
               </div>
               <div class="row description">
-                <p>Wifi gratuito disponibile</p>
+                <p data-key="services_wifi_description">Wifi gratuito disponibile</p>
               </div>
             </div>
           </div>
@@ -383,7 +392,7 @@
 
       <section id="gallery">
         <div>
-          <h2>GALLERIA</h2>
+          <h2 data-key="gallery_title">GALLERIA</h2>
         </div>
 
         <div id="carouselExampleIndicators" class="carousel mb-6" data-bs-ride="carousel">
@@ -420,7 +429,7 @@
         <div class="container-fluid bg-dark text-center">
           <div class="row">
             <div class="col">
-              <h2>CONTATTACI</h2>
+              <h2 data-key="contacts_title">CONTATTACI</h2>
             </div>
           </div>
           <div class="row">
@@ -464,6 +473,7 @@
         <div class="row align-items-center">
           <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
             <p class="mb-0">&copy; 2025 Villa Rucellai. All rights reserved.</p>
+            <p>Visit <a href="http://www.villarucellai.it">our first website</a>!</p>
           </div>
           <div class="col-md-6 text-center text-md-end">
             <div class="social-icons">
@@ -477,7 +487,8 @@
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/translation.js"></script>
     <!-- import scripts for bootstrap -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->

@@ -19,12 +19,6 @@ main {
   height: inherit !important;
 }
 
-@media screen and (min-width: 992px) {
-  
-}
-/* 
-
-*/
 header{
   min-height:80px;
 }
@@ -49,6 +43,20 @@ min-height:inherit;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#languageSelector img{
+  aspect-ratio: auto;
+  height: 35px;
+  padding-left: 5px;
+}
+
+/* # add style with screen smaller than 100 px */
+@media (max-width: 991px) {
+  #languageSelector img{
+    /* height: 25px; */
+    padding-top: 5px;
+  }
 }
 
 #btn-back-to-top {
@@ -86,6 +94,7 @@ min-height:inherit;
 #gallery{
   padding-top: 80px;
   margin-bottom: 50px;
+  max-width: 90% !important;
 }
 
 .carousel-item.active{
@@ -95,7 +104,7 @@ min-height:inherit;
 #carouselExampleIndicators {
   margin: 50 auto;
   margin-top:15px;
-  width: 75%;
+  /* width: 75%; */
 }
 
 #carouselExampleIndicators .carousel-item.active{
@@ -119,7 +128,13 @@ min-height:inherit;
 .carousel-inner{
   /* height: calc(100vh - 80px) !important; */
   height: inherit !important;
-  height: 500px !important;
+  /* height: 500px !important; */
+  width: 80%; /* Responsive width */
+  /* max-width: 800px; */
+  aspect-ratio: 16 / 9; /* Locks aspect ratio */
+  /* overflow: hidden;
+  position: relative;  */
+  margin: auto;
 }
 #myCarousel .carousel-inner{
   height: calc(100vh - 80px) !important;
@@ -216,19 +231,19 @@ min-height:inherit;
   margin-bottom: 50px;
 }
 #activities .container > .row {
-  margin-top: 35px;
+  /* margin-top: 35px; */
   margin-bottom: 35px;
 }
 #activities .container {
-  width: 65%;
-  text-align: centers;
+  /* width: 65%; */
+  text-align: center;
 }
 
 #activities h5 {
   font-weight: bold;
 }
 #activities .description {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   padding: 0 15px;
 }
 
@@ -241,7 +256,7 @@ min-height:inherit;
   margin-bottom: 35px;
 }
 #services .container {
-  width: 65%;
+  /* width: 65%; */
   text-align: center;
 }
 
@@ -249,7 +264,7 @@ min-height:inherit;
   font-weight: bold;
 }
 #services .description {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   padding: 0 15px;
   text-align: center;
 }
@@ -281,6 +296,15 @@ min-height:inherit;
       margin: auto;
   }
 }
+
+
+/* @media (max-width: 1315px) { */
+  #aboutUs, #booking, #activities, #services, #gallery {
+    text-align: center;
+    max-width: 85%;
+    margin: auto;
+  }
+/* } */
 
 
 #contactsMail{
