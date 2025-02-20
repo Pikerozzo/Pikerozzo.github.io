@@ -18,6 +18,13 @@ main {
   object-fit: cover !important;
   height: inherit !important;
 }
+.carousel-caption{
+  font-family: 'Castellar', sans-serif;
+  font-size: 2.5rem;
+  background-color: black;
+  padding: 0;
+
+}
 
 header{
   min-height:80px;
@@ -37,7 +44,31 @@ min-height:inherit;
 #navbar-logo h2 {
   margin:0;
   margin-left: 5px;
+  font-family: 'Lucida Unicode Calligraphy', sans-serif;
 } 
+
+/* #navbar-last-items {
+  displa;
+} */
+
+/* add style if screen is smaller than 1000 px */
+@media (min-width: 992px) {
+  .navbar-nav {
+    width: fit-content; 
+  }
+  #navbar-last-items {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 32%;
+    min-width: fit-content;
+  }
+  #navbar-last-items a {
+    width: 169px;
+  }
+  /* #languageSelector {
+    padding: 0 20%;
+  } */
+}
 
 #languageSelector {
   display: flex;
@@ -89,6 +120,11 @@ min-height:inherit;
     background-color: #0056b3; /* Darker blue on hover */
     transform: scale(1.05);
     box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  .book-now-btn-nav {
+    border: 5px solid white !important; /* Bootstrap primary blue */
+    font-weight: 900 !important;
   }
 
 #gallery{
@@ -248,10 +284,30 @@ min-height:inherit;
 }
 
 
+#info h5 {
+  font-weight: bold;
+}
+#info .container > .row {
+  margin-bottom: 35px;
+}
+
+/* #history_p #about_us_p */
+p {
+  white-space: pre-line;
+  text-align: justify;
+}
 
 #services {
   padding-top: 80px;
 }
+#services p{
+  text-align: center;
+}
+
+#info p, #aboutUs p{
+  padding:0 40px;
+}
+
 #services .container > .row {
   margin-bottom: 35px;
 }
@@ -286,30 +342,37 @@ min-height:inherit;
 }
 
 #contacts .row {
-  width: 65%;
+  width: 70%;
   text-align: center;
+  text-align-last: center;
   margin: auto;
 }
 
 @media (max-width: 1315px) {
   #contacts .row {
-      width: 88%;
+      width: 90%;
       text-align: center;
+      text-align-last: center;  
       margin: auto;
   }
 }
 
 
 /* @media (max-width: 1315px) { */
-  #aboutUs, #booking, #activities, #services, #gallery {
+  /* #aboutUs, #booking, #activities, #services, #gallery { */
+  #aboutUs, #booking, #activities, #services, #gallery, #history {
     text-align: center;
     max-width: 85%;
     margin: auto;
   }
 /* } */
 
+#history{
+  padding-top: 80px;
+  margin-bottom: 50px;
+}
 
-#contactsMail{
+#contactsMail, #firstWebsite {
     color:white;
     /* # remove text-underline-offset:  */
     text-decoration: none;
@@ -370,4 +433,79 @@ display: flex;
   width: 60px;
   height: 60px;
   object-fit: cover;
+}
+
+
+
+
+
+/* collapsible texts, e.g. history, about us */
+.collapsible-text {
+  /* border-bottom: 1px dotted grey; */
+  padding: 3px;
+
+}
+.collapsible-text .text {
+  font-size: 12px;
+  line-height: 17px;
+  font-family: arial;
+}
+
+.collapsible-text .text.short {        
+  overflow: hidden;
+}
+.collapsible-text .text.full {
+  display: none;
+}
+.read-more {
+  cursor: pointer;
+  display: inline-block;    
+  font-weight: bold;
+  padding: 3px;
+  background-color: #06c;
+  color: white;
+  margin: 2px;
+}
+.ellipsis {
+  color: #06c;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+.collapsible-text {
+  max-height: 100px; /* Adjust as needed */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.compressed::after {
+  content: "..."; 
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  right: 0;
+  background: beige; 
+  z-index: 10;
+  /* padding-left: 5px; */
+}
+
+.collapsible-text.expanded {
+  max-height: none;
+}
+
+.read-more-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  display: block;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
 }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./imgs/im03521a.gif" />
+    <link href="https://fonts.cdnfonts.com/css/lucida-unicode-calligraphy" rel="stylesheet">
+                       
     <!-- Add the slick-theme.css if you want default styling -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" /> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
@@ -22,7 +24,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+      <nav class="navbar navbar-expand-xl navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" id="navbar-logo">
             <img src="imgs/logo_white.gif" alt="Villa Rucellai Logo" height="40">
@@ -40,21 +42,27 @@
                 <a class="nav-link" href="#services" data-key="nav_services">Servizi</a>
               </li>            
               <li class="nav-item">
+                <a class="nav-link" href="#info" data-key="nav_info">Informazioni</a>
+              </li>            
+              <li class="nav-item">
                 <a class="nav-link" href="#gallery" data-key="nav_gallery">Galleria</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contacts" data-key="nav_contacts">Contatti</a>
               </li>
             </ul>
-            <div class="mr-5">
-              <a href="#" class="btn btn-dark btn-lg btn-outline-light book-now-btn py-3" data-key="book_now_btn">
-                Prenota Ora
-              </a>
+            <div id="navbar-last-items">
+              <div class="mr-5">
+                <a href="#" class="btn btn-dark btn-lg btn-outline-light book-now-btn book-now-btn-nav py-3" data-key="book_now_btn">
+                  Prenota Ora
+                </a>
+              </div>
+              <div id="languageSelector">
+                <img type="button" class='lang-switch' id="lang-switch-it" src="./imgs/icons/flag_italy.png" alt="Italiano" style="display: none"/>
+                <img type="button" class='lang-switch' id="lang-switch-en" src="./imgs/icons/flag_uk.png" alt="English" style="display: none"/>
+              </div>
             </div>
-            <div id="languageSelector">
-              <img type="button" class='lang-switch' id="lang-switch-it" src="./imgs/icons/flag_italy.png" alt="Italiano" style="display: none"/>
-              <img type="button" class='lang-switch' id="lang-switch-en" src="./imgs/icons/flag_uk.png" alt="English" style="display: none"/>
-            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -132,17 +140,22 @@
               </p>
             </div>
             <div class="col-lg-6">
-              <h2 data-key="about_us_history_title">LA NOSTRA STORIA</h2>
-              <p data-key="about_us_history_p">
-                La Villa Rucellai è un antico casale toscano situato a Prato, a
-                pochi chilometri da Firenze. La struttura è immersa nel verde
-                della campagna toscana e offre ai suoi ospiti un'esperienza
-                unica e indimenticabile.
+              <h2 data-key="activities_title">COSE</h2>
+              <p data-key="activities_p">
+                Situata nella Val di Bisenzio, Villa Rucellai è un <b>punto di partenza strategico</b> 
+                per visitare le principali attrazioni turistiche della Toscana: Firenze dista 
+                circa 20 km come anche Pistoia (circa 20 km), Lucca circa 60 km, Pisa circa 
+                75 km, Siena e Arezzo circa 90 km, tutti centri storico-artistici di rilievo 
+                facilmente raggiungibili in auto o con i mezzi pubblici. Inoltre, dista circa 
+                30 km dalla stazione termale di Montecatini e circa 85 km dalle rinomate spiagge 
+                della Versilia (Viareggio, Forte dei Marmi, Torre del Lago Puccini, etc).
               </p>
             </div>
           </div>
         </div>
       </section>
+
+    
 
       <section id="booking">
         <!-- <h2>Prenota Ora</h2> -->
@@ -152,7 +165,27 @@
         </a>
       </section>
 
-      <section id="activities">
+      <section id="history">
+        <div class="col-lg">
+          <h2 data-key="history_title">LA NOSTRA STORIA</h2>
+          <p class="text short"></p>
+          <p data-key="history_p" class="collapsible-text compressed">
+            La famiglia Rucellai è una delle famiglie più illustri di Firenze, la cui storia affonda le radici nel Medioevo e si estende fino al Rinascimento, segnando profondamente la vita culturale, economica e politica della città. I Rucellai furono protagonisti di numerosi aspetti della vita fiorentina, dalla banca e commercio alla politica, passando per l'arte e la cultura.
+Nel XIII secolo, divenne una delle principali famiglie mercantili di Firenze, e il loro prestigio crebbe a tal punto che cominciarono a competere con le altre grandi famiglie fiorentine, come i Medici e i Pazzi.
+Nel Quattrocento, la famiglia Rucellai raggiunse il culmine della sua influenza sotto la guida di Giovanni di Paolo Rucellai e del figlio Bernardo Rucellai che, a sua volta, convolò a nozze con Nannina De\' Medici l\'8 giugno 1466. 
+La famiglia si distinse per il suo impegno nel ricoprire cariche politiche di rilievo e in istituzioni pubbliche nel Comune di Firenze ma non mancò mai un legame con il pensiero umanista e con gli intellettuali che fiorivano a Firenze in quel periodo. Molti membri della famiglia Rucellai erano in contatto con Leonardo da Vinci, Pico della Mirandola e altri grandi pensatori, e promossero la diffusione della cultura classica.
+Il legame da parte della famiglia, ma soprattutto di Bernardo, con l'arte è particolarmente evidente nel progetto della Villa Rucellai, così come nell'influenza che quest\'ultimo ebbe su artisti e architetti del suo tempo. È noto che fu mecenate di Leon Battista Alberti, uno dei più importanti architetti dell'epoca, e che Alberti progettò tra le altre cose, proprio su commissione della famiglia Rucellai, la facciata della Chiesa di San Pancrazio a Firenze. Un altro imponente progetto fu poi la facciata della Chiesa di Santa Maria Novella, su cui sono presenti gli stemmi della famiglia che ne testimoniano proprio l\'importanza e il contributo dato alla cultura.
+Sempre al noto architetto Leon Battista Alberti e su commissione della famiglia si deve il progetto della Villa Rucellai di Prato, che è uno degli esempi più significativi di residenza nobiliare rinascimentale in Toscana, un luogo dove la storia, l'arte e la natura si intrecciano in un perfetto equilibrio. 
+Costruita nel XV secolo su una torre medievale preesistente, la villa è l'affascinante testimonianza di un progetto architettonico che unisce elementi della tradizione medievale a quelli innovativi del Rinascimento. La villa si presenta con una facciata imponente, caratterizzata da eleganti logge e decorazioni che richiamano la simmetria e la perfezione geometrica tipiche della filosofia dell\'epoca.
+Non solo architettura, ma anche giardini. La villa è circondata da un parco rigoglioso che rappresenta un autentico angolo di tranquillità e bellezza naturale. Tra le aiuole e gli alberi secolari, il giardino si ispira alla tradizione dei giardini all'italiana, con forme geometriche perfette e fontane che creano un'atmosfera di serenità e armonia. Sebbene meno conosciuta rispetto ad altre ville toscane, rappresenta un vero e proprio capolavoro nascosto che merita di essere scoperto per la sua bellezza, la sua storia e il suo legame con il patrimonio culturale della Toscana.
+Un viaggio alla Villa Rucellai è un'immersione nella storia, nella cultura e nella natura della Toscana, un'esperienza che permette di riscoprire il fascino di un'epoca che ha segnato profondamente la civiltà europea (altre piccole curiosità su Instagram).
+          </p>
+          <!-- <span class="read-more">readmore</span> -->
+          <button class="read-more-btn btn btn-dark btn-sm" data-key="history_read_more_btn">Read more</button>
+        </div>
+      </section>
+      
+      <!-- <section id="activities">
         <div class="container">
           <div class="row">
             <div class="col-md text-center"><h2>COSE DA FARE</h2></div>
@@ -185,8 +218,6 @@
                 città di Prade
               </div>
             </div>
-          <!-- </div>
-          <div class="row"> -->
             <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
               <div class="row">
                 <div class="col"><h5>Tour enogastronomici</h5></div>
@@ -216,7 +247,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section id="services">
         <div class="container">
@@ -232,7 +263,7 @@
                 </div>
               </div>
               <div class="row description">
-                <p data-key="services_breakfast_description">Prima colazione inclusa</p>
+                <p data-key="services_breakfast_p">Prima colazione inclusa</p>
               </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
@@ -243,7 +274,7 @@
                 </div>
               </div>
               <div class="row description">
-                <p data-key="services_garden_description">Giardino all'italiana</p>
+                <p data-key="services_garden_p">Giardino all'italiana</p>
               </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
@@ -254,7 +285,7 @@
                 </div>
               </div>
               <div class="row description">
-                <p data-key="services_parking_description">Parcheggio gratuito disponibile</p>
+                <p data-key="services_parking_p">Parcheggio gratuito disponibile</p>
               </div>
             </div>
           <!-- </div>
@@ -267,7 +298,7 @@
                 </div>
               </div>
               <div class="row description">
-                <p data-key="services_pool_description">Piscina all'aperto disponibile</p>
+                <p data-key="services_pool_p">Piscina all'aperto disponibile</p>
               </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
@@ -278,7 +309,7 @@
                 </div>
               </div>
               <div class="row description">
-                <p data-key="services_cleaning_description">Pulizie quotidiane</p>
+                <p data-key="services_cleaning_p">Pulizie quotidiane</p>
               </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 text-center mb-4">
@@ -289,13 +320,65 @@
                 </div>
               </div>
               <div class="row description">
-                <p data-key="services_wifi_description">Wifi gratuito disponibile</p>
+                <p data-key="services_wifi_p">Wifi gratuito disponibile</p>
               </div>
             </div>
           </div>
 
         </div>
       </section>
+
+
+      <section id="info">
+        <div class="container">
+          <div class="row">
+            <div class="col-md text-center"><h2 data-key="info_title">INFORAMZIONI</h2></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-lg-6 text-center mb-4">
+              <div class="row">
+                <div class="col"><h5 data-key="info_breakfast_title">Colazione</h5></div>
+              </div>
+              <div class="row description">
+                <p data-key="info_breakfast_p">La prima colazione, in stile intercontinentale, viene servita nella sala comune o in loggia, per godere della tranquillità del paesaggio toscano, dalle ore 7:30 fino alle ore 9:30.</p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 text-center mb-4">
+              <div class="row">
+                <div class="col"><h5 data-key="info_tax_title">Tasse</h5></div>
+              </div>
+              <div class="row description">
+                <p data-key="info_tax_p">La tassa di soggiorno è di €0,50 a persona a notte.</p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 text-center mb-4">
+              <div class="row">
+                <div class="col"><h5 data-key="info_checkin_title">Check-in</h5></div>
+              </div>
+              <div class="row description">
+                <p data-key="info_checkin_p">Il nostro bed and breakfast è a conduzione familiare e la reception non è 24h perciò chiediamo gentilmente ai nostri ospiti di comunicarci l\'orario di arrivo, così da poter organizzare al meglio l\'accoglienza. In ogni caso, le camere sono disponibili a partire dalle ore 15:00.</p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 text-center mb-4">
+              <div class="row">
+                <div class="col"><h5 data-key="info_checkout_title">Check-out</h5></div>
+              </div>
+              <div class="row description">
+                <p data-key="info_checkout_p">Il check-out delle camere avviene entro le ore 10:00 in modo da permettere la pulizia degli ambienti, con la possibilità di depositare gratuitamente i bagagli in reception fino alla partenza.</p>              
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg text-center mb-4">
+              <div class="row">
+                <div class="col"><h5 data-key="info_events_title">Eventi</h5></div>
+              </div>
+              <div class="row description">
+                <p data-key="info_events_p">La Villa Rucellai è un luogo straordinario, dove la storia, la bellezza e la raffinatezza si incontrano per creare l\'atmosfera ideale per momenti indimenticabili. Immersa nel cuore della Toscana, questa villa storica offre non solo un\'incantevole cornice naturale, ma anche un\'architettura che racconta secoli di tradizione, eleganza e cultura. \\n Che si tratti di un matrimonio da sogno, un anniversario speciale o una celebrazione privata, la Villa Rucellai è il posto perfetto per vivere un evento unico. Con i suoi ampi e raffinati spazi, sia interni che esterni, la villa è in grado di accogliere ogni tipo di celebrazione, rendendo ogni occasione speciale ancora più memorabile. \\n Perché ogni celebrazione merita di essere vissuta in un luogo unico, e noi siamo pronti ad offrirvi un\'esperienza che non dimenticherete mai.</p>     
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <section id="gallery">
         <div>
@@ -342,15 +425,17 @@
             </div>
             <div class="row">
               <div class="col-lg">
-                <p>
-                  <a href="mailto:villarucellai@masternet.it" id="contactsMail">villarucellai@masternet.it</a                >
-                </p>
+                <p>B&B: <a href="mailto:villarucellai@masternet.it" id="contactsMail">villarucellai@masternet.it</a></p>
+                <p>Eventi: <a href="mailto:villarucellai.events@gmail.com" id="contactsMail">villarucellai.events@gmail.com</a></p>
               </div>
               <div class="col-lg">
                 <p>Via di Canneto 16, 59100 Prato (PO)</p>    
               </div>
               <div class="col-lg">
                 <p>Tel: (+39) 0574 462225</p>
+              </div>
+              <div class="col-lg">
+                <p><a href="http://www.villarucellai.it/Seconda/index.htm" data-key="contacts_first_website" target=”_blank” id="firstWebsite"></a></p>
               </div>
             </div>
             <div class="row social-icons">
