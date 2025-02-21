@@ -18,6 +18,12 @@ main {
   object-fit: cover !important;
   height: inherit !important;
 }
+
+@font-face {
+  font-family: 'Castellar';
+  src: url('../fonts/castellar-regular.ttf');
+}
+
 .carousel-caption{
   font-family: 'Castellar', sans-serif;
   font-size: 2.5rem;
@@ -128,7 +134,8 @@ min-height:inherit;
   }
 
 #gallery{
-  padding-top: 80px;
+  padding-top: 90px;
+  margin-top: -10px;
   margin-bottom: 50px;
   max-width: 90% !important;
 }
@@ -216,7 +223,8 @@ min-height:inherit;
 
 
 #aboutUs{
-  padding-top: 80px;
+  padding-top: 100px;
+  margin-top: -20px !important;
   margin-bottom: 50px;
 }
 
@@ -297,8 +305,15 @@ p {
   text-align: justify;
 }
 
+#info{
+  padding-top: 90px;
+  margin-top:-10px;
+  /* margin-bottom: 50px; */
+}
+
 #services {
-  padding-top: 80px;
+  padding-top: 90px;
+  margin-top: -10px;
 }
 #services p{
   text-align: center;
@@ -327,8 +342,8 @@ p {
 
 
 #contacts_content{
-  padding-top: 80px;
-  margin-top: -80px;
+  padding-top: 100px;
+  margin-top: -90px;
 }
 
 #contacts h2 {
@@ -350,7 +365,7 @@ p {
 
 @media (max-width: 1315px) {
   #contacts .row {
-      width: 90%;
+      width: 95%;
       text-align: center;
       text-align-last: center;  
       margin: auto;
@@ -368,7 +383,7 @@ p {
 /* } */
 
 #history{
-  padding-top: 80px;
+  padding-top: 60px;
   margin-bottom: 50px;
 }
 
@@ -376,6 +391,9 @@ p {
     color:white;
     /* # remove text-underline-offset:  */
     text-decoration: none;
+}
+#firstWebsite a {
+    color: white;
 }
 
 
