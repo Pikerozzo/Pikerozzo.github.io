@@ -130,7 +130,7 @@ Perché ogni celebrazione merita di essere vissuta in un luogo unico, e noi siam
 
 
 
-document.querySelectorAll("[data-key]").forEach(el => {console.log(el.dataset.key);});
+// document.querySelectorAll("[data-key]").forEach(el => {console.log(el.dataset.key);});
 
 
 availableLangs = Object.keys(translations);

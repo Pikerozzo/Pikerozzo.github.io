@@ -27,7 +27,7 @@ main {
 .carousel-caption{
   font-family: 'Castellar', sans-serif;
   font-size: 2.5rem;
-  background-color: black;
+  /* background-color: black; */
   padding: 0;
 
 }
@@ -526,4 +526,65 @@ display: flex;
 
 .read-more-btn:hover {
   background-color: #0056b3;
+}
+
+
+.pop img{
+  height: 250px;
+}
+
+.modal-dialog {
+  margin: auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: -webkit-fill-available;
+}
+
+.modal-content {
+  width: fit-content !important;
+}
+
+
+
+
+/* // add style if screen is larger than 500px */
+.boxes img{    
+  height: 380px                   
+}
+/* @media (min-width: 500px) {
+} */
+@media (max-width: 500px) {
+  .boxes img{    
+    height: auto;
+    width: 35vw;                
+  }
+
+  .imagepreview {
+    max-width: 50em !important;
+    max-height: 50em !important;
+
+  }
+
+}
+
+
+
+.slick-track {
+display: flex !important;
+}
+.slick-track .slick-slide {
+display: flex !important;
+height: auto;
+align-items: center;
+justify-content: center;
+padding:0 3px;
+}
+
+.imagepreview {
+  max-width: 50vw;
+  max-height: 50vh;
+  /* width: -webkit-fill-available !important; */
+  height: -webkit-fill-available;
 }
