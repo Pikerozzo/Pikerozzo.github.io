@@ -95,10 +95,10 @@ for (var i = 1; i < 55; i++) {
   img.class = "d-block w-100";
   img.src = "./imgs/gallery/" + i + ".jpg";
   img.alt = "Image " + i;
-  if (i > 2 && i < 54) {
-    // img.loading = "eager";
-    img.loading = "lazy";
-  }
+  // if (i > 2 && i < 54) {
+  //   // img.loading = "eager";
+  //   img.loading = "lazy";
+  // }
   
   item.appendChild(img);
   inner.appendChild(item);
