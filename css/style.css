@@ -1,6 +1,4 @@
 body {
-  /* margin: 0;
-  padding: 0; */
   margin: 0;
   font-family: Georgia, 'Times New Roman', Times, serif !important;
 }
@@ -9,8 +7,8 @@ main {
   background-color: #f0f0f0;
   background-color: beige;
   text-align: center;
-  /* margin-top: 65px; */
 }
+
 #myCarousel .carousel-item.active{
   height: 100% !important;
 }
@@ -27,9 +25,20 @@ main {
 .carousel-caption{
   font-family: 'Castellar', sans-serif;
   font-size: 2.5rem;
-  /* background-color: black; */
   padding: 0;
+  text-align-last: center;
+  font-size: initial;
+}
 
+.carousel-control-next {
+  padding-left: 15px !important;
+}
+.carousel-control-prev {
+  padding-right: 15px !important;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
 }
 
 header{
@@ -38,6 +47,7 @@ header{
 
 .navbar{
 min-height:inherit;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #navbar{
@@ -53,11 +63,7 @@ min-height:inherit;
   font-family: 'Lucida Unicode Calligraphy', sans-serif;
 } 
 
-/* #navbar-last-items {
-  displa;
-} */
 
-/* add style if screen is smaller than 1000 px */
 @media (min-width: 992px) {
   .navbar-nav {
     width: fit-content; 
@@ -71,9 +77,6 @@ min-height:inherit;
   #navbar-last-items a {
     width: 169px;
   }
-  /* #languageSelector {
-    padding: 0 20%;
-  } */
 }
 
 #languageSelector {
@@ -88,50 +91,46 @@ min-height:inherit;
   padding-left: 5px;
 }
 
-/* # add style with screen smaller than 100 px */
 @media (max-width: 991px) {
   #languageSelector img{
-    /* height: 25px; */
     padding-top: 5px;
   }
 }
 
 #btn-back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    z-index: 99;
-    }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 99;
+}
 
 #booking {
-    /* margin-top: 70px;
-    margin-bottom: 100px; */
-    padding: 50px 0;
+  padding: 50px 0;
 }
 #booking a{
-    width: 200px;
-    font-weight: bold;
+  width: 200px;
+  font-weight: bold;
 }
 .book-now-btn {
-    background-color: #007bff; /* Bootstrap primary blue */
-    border: none;
-    font-size: 1.2rem;
-    padding: 12px 30px;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  .book-now-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05);
-    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
-  }
+  background-color: #007bff;
+  border: none;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.book-now-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
 
-  .book-now-btn-nav {
-    border: 5px solid white !important; /* Bootstrap primary blue */
-    font-weight: 900 !important;
-  }
+.book-now-btn-nav {
+  border: 5px solid white !important;
+  font-weight: 900 !important;
+}
 
 #gallery{
   padding-top: 90px;
@@ -146,8 +145,7 @@ min-height:inherit;
 
 #carouselExampleIndicators {
   margin: 50 auto;
-  margin-top:15px;
-  /* width: 75%; */
+  margin-top:15px;  
 }
 
 #carouselExampleIndicators .carousel-item.active{
@@ -169,22 +167,17 @@ min-height:inherit;
   margin:0;
 }
 .carousel-inner{
-  /* height: calc(100vh - 80px) !important; */
   height: inherit !important;
-  /* height: 500px !important; */
-  width: 80%; /* Responsive width */
-  /* max-width: 800px; */
-  aspect-ratio: 16 / 9; /* Locks aspect ratio */
-  /* overflow: hidden;
-  position: relative;  */
+  width: 80%;
+  aspect-ratio: 16 / 9;
   margin: auto;
 }
-#myCarousel .carousel-inner{
+#myCarousel .carousel-inner {
   height: calc(100vh - 80px) !important;
 }
 
 #imageCarouselSection {
-  max-width: 100%; /* Ensures responsiveness */
+  max-width: 100%;
   height: 350px;
 }
 
@@ -199,28 +192,19 @@ min-height:inherit;
 .carousel-inner {
   align-content: center;
   display: flex;
-  align-items: center; /* Centers images vertically */
+  align-items: center;
   justify-content: center;
-  /* height: 500px; Set a fixed height for consistency */
-  /* height: 65%; */
   height: 500px;
-
-
-
-
-    justify-items: center;
-    flex-direction: row-reverse;
+  justify-items: center;
+  flex-direction: row-reverse;
 }
 
 .carousel-item img {
-  max-height: 100%; /* Ensures images do not exceed carousel height */
-  width: auto; /* Maintains aspect ratio */
-  object-fit: contain; /* Ensures the whole image fits inside */
-  margin: auto; /* Centers images horizontally */
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  margin: auto;
 }
-
-
-
 
 #aboutUs{
   padding-top: 100px;
@@ -232,14 +216,6 @@ min-height:inherit;
 
 
 
-
-
-
-/* 
-.google-map {
-  padding-bottom: 18px;
-} */
-
 .google-map iframe {
   height: 630px;
   width: 100%;
@@ -248,12 +224,10 @@ min-height:inherit;
 }
 
 .footer {
-  /* margin-top: 30px; */
   background-color: #333;
   color: white;
   text-align: center;
   padding: 20px 0;
-  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;
@@ -275,11 +249,9 @@ min-height:inherit;
   margin-bottom: 50px;
 }
 #activities .container > .row {
-  /* margin-top: 35px; */
   margin-bottom: 35px;
 }
 #activities .container {
-  /* width: 65%; */
   text-align: center;
 }
 
@@ -287,7 +259,6 @@ min-height:inherit;
   font-weight: bold;
 }
 #activities .description {
-  /* margin-top: 10px; */
   padding: 0 15px;
 }
 
@@ -299,7 +270,6 @@ min-height:inherit;
   margin-bottom: 35px;
 }
 
-/* #history_p #about_us_p */
 p {
   white-space: pre-line;
   text-align: justify;
@@ -308,7 +278,6 @@ p {
 #info{
   padding-top: 90px;
   margin-top:-10px;
-  /* margin-bottom: 50px; */
 }
 
 #services {
@@ -323,11 +292,16 @@ p {
   padding:0 40px;
 }
 
+@media (max-width: 992px) { 
+  #aboutUs p {
+    padding: 0 20px;
+  }
+}
+
 #services .container > .row {
   margin-bottom: 35px;
 }
 #services .container {
-  /* width: 65%; */
   text-align: center;
 }
 
@@ -335,7 +309,6 @@ p {
   font-weight: bold;
 }
 #services .description {
-  /* margin-top: 10px; */
   padding: 0 15px;
   text-align: center;
 }
@@ -373,14 +346,11 @@ p {
 }
 
 
-/* @media (max-width: 1315px) { */
-  /* #aboutUs, #booking, #activities, #services, #gallery { */
-  #aboutUs, #booking, #activities, #services, #gallery, #history {
-    text-align: center;
-    max-width: 85%;
-    margin: auto;
-  }
-/* } */
+#aboutUs, #booking, #activities, #services, #gallery, #history {
+  text-align: center;
+  max-width: 85%;
+  margin: auto;
+}
 
 #history{
   padding-top: 60px;
@@ -389,24 +359,10 @@ p {
 
 #contactsMail, #firstWebsite {
     color:white;
-    /* # remove text-underline-offset:  */
     text-decoration: none;
 }
 #firstWebsite a {
     color: white;
-}
-
-
-/* 
-.navbar{
-  height: 125px;
-} */
-
-
-
-
-.navbar {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
@@ -442,9 +398,9 @@ p {
 }
 
 .service-item{
-display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .service-item img{
@@ -454,15 +410,6 @@ display: flex;
 }
 
 
-
-
-
-/* collapsible texts, e.g. history, about us */
-.collapsible-text {
-  /* border-bottom: 1px dotted grey; */
-  padding: 3px;
-
-}
 .collapsible-text .text {
   font-size: 12px;
   line-height: 17px;
@@ -492,7 +439,8 @@ display: flex;
 
 
 .collapsible-text {
-  max-height: 100px; /* Adjust as needed */
+  padding: 3px;
+  max-height: 100px;
   overflow: hidden;
   position: relative;
   transition: max-height 0.5s ease-in-out;
@@ -506,7 +454,6 @@ display: flex;
   right: 0;
   background: beige; 
   z-index: 10;
-  /* padding-left: 5px; */
 }
 
 .collapsible-text.expanded {
@@ -547,14 +494,10 @@ display: flex;
 }
 
 
-
-
-/* // add style if screen is larger than 500px */
 .boxes img{    
   height: 380px                   
 }
-/* @media (min-width: 500px) {
-} */
+
 @media (max-width: 500px) {
   .boxes img{    
     height: auto;
@@ -564,27 +507,28 @@ display: flex;
   .imagepreview {
     max-width: 50em !important;
     max-height: 50em !important;
-
   }
-
 }
 
 
+.slick-arrow {
+  filter: invert(100%);
+}
 
 .slick-track {
-display: flex !important;
+  display: flex !important;
 }
+
 .slick-track .slick-slide {
-display: flex !important;
-height: auto;
-align-items: center;
-justify-content: center;
-padding:0 3px;
+  display: flex !important;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  padding:0 3px;
 }
 
 .imagepreview {
   max-width: 50vw;
   max-height: 50vh;
-  /* width: -webkit-fill-available !important; */
   height: -webkit-fill-available;
 }

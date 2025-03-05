@@ -95,12 +95,10 @@ for (var i = 1; i < 55; i++) {
   img.class = "d-block w-100";
   img.src = "./imgs/gallery/" + i + ".jpg";
   img.alt = "Image " + i;
-  // if (i > 2 && i < 54) {
-  //   // img.loading = "eager";
-  //   img.loading = "lazy";
-  // }
-  // link.textContent = translations[lang]['contacts_first_website_link'];
-  // myfirstWebsite.textContent = translations[lang]['contacts_first_website'];
+  if (i > 2 && i < 54) {
+    // img.loading = "eager";
+    img.loading = "lazy";
+  }
   
   item.appendChild(img);
   inner.appendChild(item);
@@ -122,7 +120,6 @@ gallery.appendChild(inner);
 
 
 
-// document.querySelector('.multiple-items').addEventListener('click', function () {
 $('.multiple-items').slick({
   infinite: true,
   slidesToShow: 3,
@@ -130,30 +127,10 @@ $('.multiple-items').slick({
 });
 		
 
-// document.querySelectorAll('.pop').forEach(pop => {
-//   pop.addEventListener('click', function () {
-//     console.log(this.querySelector('img').src);
-//     document.querySelector('.imagepreview').src = this.querySelector('img').src;
-//     // $('#imagemodal').modal('show');
-//     // document.querySelector('#imagemodal').modal('show');
-//     const modal = document.querySelector('#imagemodal');
-//     // modal.classList.add('show');
-//     modal.modal('show');
-
-//   });
-// });
-
-// $(function() {
-//   $('.pop').on('click', function() {
-//     $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-//     $('#imagemodal').modal('show');   
-//   });		
-// });
 $(function() {
   $('.boxes').on('click', function() {
     if (this.classList.contains('slick-current')) {
       
-      console.log('EXPANDING');
       $('.imagepreview').attr('src', $(this).find('img').attr('src'));
       $('#imagemodal').modal('show');   
     }
@@ -164,19 +141,16 @@ $(function() {
 
 
 
-// const eventsGallery = document.querySelector("#eventCarousel .multiple-items");
-// for (var i = 1; i < 11; i++) {
-//   const ext_div = document.createElement("div");
-//   const int_div = document.createElement("div");
-//   int_div.classList.add("pop");
-//   int_div.type = "button";
-//   const img = document.createElement("img");
-//   img.src = "./imgs/gallery/events/" + i + ".jpg";
-//   img.alt = "Event " + i;
-//   int_div.appendChild(img);
-//   ext_div.appendChild(int_div);
-//   eventsGallery.appendChild(ext_div);
-// }
+const eventsGallery = document.querySelector("#eventCarousel");
+for (var i = 1; i <= 11; i++) {
+  const div = document.createElement("div");
+  div.classList.add("boxes");
+  const img = document.createElement("img");
+  img.src = "./imgs/gallery/events/" + i + ".jpg";
+  img.alt = "Event " + i;
+  div.appendChild(img);
+  eventsGallery.appendChild(div);
+}
 
 
 
@@ -194,7 +168,6 @@ $(document).ready(function(){
         centerMode: true,
 
 variableWidth: true,
-//   align: true,
 focusOnSelect: true,
 
         responsive: [
@@ -221,28 +194,6 @@ focusOnSelect: true,
               slidesToScroll: 1
             }
           }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
         ]
       });
 });
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const carousel = document.getElementById("carouselExampleIndicators");
-  
-//   carousel.addEventListener("slide.bs.carousel", function (event) {
-//       let nextSlide = event.relatedTarget; // Get the next slide element
-//       let img = nextSlide.querySelector("img");
-
-//       if (img && img.loading === "lazy") {
-//           // Force preload before sliding
-//           img.loading = "eager"; 
-//           img.src = img.src; // Re-trigger the image load
-//       }
-//   });
-// });
