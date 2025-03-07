@@ -532,3 +532,13 @@ p {
   max-height: 50vh;
   height: -webkit-fill-available;
 }
+
+
+.modal-body {
+  padding-top: 2px !important;
+}
+
+#modalCloseBtn{
+  text-align: right;
+  font-size: smaller;
+}
