@@ -77,7 +77,8 @@ const gallery = document.querySelector("#carouselExampleIndicators .carousel-inn
 const indicators = document.querySelector("#carouselExampleIndicators .carousel-indicators");
 
 
-
+let galleryPath = "./imgs/gallery/"
+galleryPath = "./imgs/gallery_webp/"
 
 const inner = document.createElement("div");
 // inner.class = "carousel-inner";
@@ -93,7 +94,8 @@ for (var i = 1; i < 55; i++) {
   }
   const img = document.createElement("img");
   img.class = "d-block w-100";
-  img.src = "./imgs/gallery/" + i + ".jpg";
+  // img.src = "./imgs/gallery/" + i + ".jpg";
+  img.src = galleryPath + i + ".webp";
   img.alt = "Image " + i;
   // if (i > 2 && i < 54) {
   //   // img.loading = "eager";
@@ -146,7 +148,8 @@ for (var i = 1; i <= 11; i++) {
   const div = document.createElement("div");
   div.classList.add("boxes");
   const img = document.createElement("img");
-  img.src = "./imgs/gallery/events/" + i + ".jpg";
+  // img.src = "./imgs/gallery/events/" + i + ".jpg";
+  img.src = galleryPath + "events/" + i + ".webp";
   img.alt = "Event " + i;
   div.appendChild(img);
   eventsGallery.appendChild(div);
