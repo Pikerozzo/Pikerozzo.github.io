@@ -42,13 +42,12 @@ galleryCarousel.addEventListener('slide.bs.carousel', function (e) {
   
   let currentElement = activeImg;
   
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 3; i++) {
     if (currentElement) {
       currentElement = currentElement.nextElementSibling;
       if (currentElement.hasChildNodes()) {
         if (currentElement.childNodes[0].loading == "lazy") {
           currentElement.childNodes[0].loading = "eager";
-          console.log('loading ' + currentElement.childNodes[0].src);
         }
       }
     } else {
@@ -56,40 +55,6 @@ galleryCarousel.addEventListener('slide.bs.carousel', function (e) {
     }
   }
 });
-
-// document.ready(function () {
-//     var maxChars = 520
-//     var ellipsis = "..."
-//     $(".article").each(function () {
-//       var text = $(this).find(".text.full").text()
-//       var html = $(this).find(".text.full").html()
-//       if (text.length > maxChars) {
-//         var shortHtml =
-//           html.substring(0, maxChars - 3) +
-//           "<span class='ellipsis'>" +
-//           ellipsis +
-//           "</span>"
-//         $(this).find(".text.short").html(shortHtml)
-//       }
-//     })
-//     $(".read-more").click(function () {
-//       var readMoreText = "readmore"
-//       var readLessText = "readless"
-//       var $shortElem = $(this).parent().find(".text.short")
-//       var $fullElem = $(this).parent().find(".text.full")
-  
-//       if ($shortElem.is(":visible")) {
-//         $shortElem.hide()
-//         $fullElem.show()
-//         $(this).text(readLessText)
-//       } else {
-//         $shortElem.show()
-//         $fullElem.hide()
-//         $(this).text(readMoreText)
-//       }
-//     })
-//   }
-// )
   
 
 // add elements to the gallery
@@ -172,9 +137,9 @@ for (var i = 1; i <= 11; i++) {
   // img.src = "./imgs/gallery/events/" + i + ".jpg";
   img.src = galleryPath + "events/" + i + ".webp";
   img.alt = "Event " + i;
-  if (i > 2 && i < 11) {
-    img.loading = "lazy";
-  }
+  // if (i > 2 && i < 11) {
+  //   img.loading = "lazy";
+  // }
   div.appendChild(img);
   eventsGallery.appendChild(div);
 }
