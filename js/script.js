@@ -98,9 +98,10 @@ for (var i = 1; i < 55; i++) {
   img.src = galleryPath + i + ".webp";
   img.alt = "Image " + i;
   // if (i > 2 && i < 54) {
-  //   // img.loading = "eager";
-  //   img.loading = "lazy";
-  // }
+  if (i > 2) {
+    // img.loading = "eager";
+    img.loading = "lazy";
+  }
   
   item.appendChild(img);
   inner.appendChild(item);
@@ -151,6 +152,9 @@ for (var i = 1; i <= 11; i++) {
   // img.src = "./imgs/gallery/events/" + i + ".jpg";
   img.src = galleryPath + "events/" + i + ".webp";
   img.alt = "Event " + i;
+  if (i > 2 && i < 11) {
+    img.loading = "lazy";
+  }
   div.appendChild(img);
   eventsGallery.appendChild(div);
 }
