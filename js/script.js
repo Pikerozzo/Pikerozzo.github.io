@@ -36,6 +36,26 @@ document.querySelectorAll(".nav-link").forEach(link => {
 });
 
 
+const galleryCarousel = document.querySelector('#gallery #carouselExampleIndicators');
+galleryCarousel.addEventListener('slide.bs.carousel', function (e) {
+  const activeImg = document.querySelector('#gallery #carouselExampleIndicators .carousel-inner .carousel-item.active');
+  
+  let currentElement = activeImg;
+  
+  for (let i = 0; i < 2; i++) {
+    if (currentElement) {
+      currentElement = currentElement.nextElementSibling;
+      if (currentElement.hasChildNodes()) {
+        if (currentElement.childNodes[0].loading == "lazy") {
+          currentElement.childNodes[0].loading = "eager";
+          console.log('loading ' + currentElement.childNodes[0].src);
+        }
+      }
+    } else {
+      break;
+    }
+  }
+});
 
 // document.ready(function () {
 //     var maxChars = 520
@@ -73,7 +93,7 @@ document.querySelectorAll(".nav-link").forEach(link => {
   
 
 // add elements to the gallery
-const gallery = document.querySelector("#carouselExampleIndicators .carousel-inner");
+const gallery = document.querySelector("#carouselExampleIndicators");
 const indicators = document.querySelector("#carouselExampleIndicators .carousel-indicators");
 
 
@@ -98,7 +118,7 @@ for (var i = 1; i < 55; i++) {
   img.src = galleryPath + i + ".webp";
   img.alt = "Image " + i;
   // if (i > 2 && i < 54) {
-  if (i > 2) {
+  if (i > 3) {
     // img.loading = "eager";
     img.loading = "lazy";
   }
